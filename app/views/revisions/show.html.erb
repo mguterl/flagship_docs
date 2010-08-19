@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Document:</b>
+  <%= @revision.document_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @revision.user_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @revision.position %>
+</p>
+
+<p>
+  <b>Upload file name:</b>
+  <%= @revision.upload_file_name %>
+</p>
+
+<p>
+  <b>Upload content type:</b>
+  <%= @revision.upload_content_type %>
+</p>
+
+<p>
+  <b>Upload file size:</b>
+  <%= @revision.upload_file_size %>
+</p>
+
+<p>
+  <b>Upload updated at:</b>
+  <%= @revision.upload_updated_at %>
+</p>
+
+<p>
+  <b>Upload file:</b>
+  <%= @revision.upload_file %>
+</p>
+
+
+<%= link_to 'Edit', edit_revision_path(@revision) %> |
+<%= link_to 'Back', revisions_path %>

@@ -1,0 +1,45 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Private</th>
+    <th>Writable</th>
+    <th>Parent</th>
+    <th>Group</th>
+    <th>User</th>
+    <th>Children count</th>
+    <th>Ancestors count</th>
+    <th>Descendants count</th>
+    <th>Background</th>
+    <th>Is featured</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td><%= category.description %></td>
+    <td><%= category.private %></td>
+    <td><%= category.writable %></td>
+    <td><%= category.parent_id %></td>
+    <td><%= category.group_id %></td>
+    <td><%= category.user_id %></td>
+    <td><%= category.children_count %></td>
+    <td><%= category.ancestors_count %></td>
+    <td><%= category.descendants_count %></td>
+    <td><%= category.background_id %></td>
+    <td><%= category.is_featured %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Category', new_category_path %>

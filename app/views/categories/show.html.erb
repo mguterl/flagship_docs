@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @category.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @category.description %>
+</p>
+
+<p>
+  <b>Private:</b>
+  <%= @category.private %>
+</p>
+
+<p>
+  <b>Writable:</b>
+  <%= @category.writable %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= @category.parent_id %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @category.group_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @category.user_id %>
+</p>
+
+<p>
+  <b>Children count:</b>
+  <%= @category.children_count %>
+</p>
+
+<p>
+  <b>Ancestors count:</b>
+  <%= @category.ancestors_count %>
+</p>
+
+<p>
+  <b>Descendants count:</b>
+  <%= @category.descendants_count %>
+</p>
+
+<p>
+  <b>Background:</b>
+  <%= @category.background_id %>
+</p>
+
+<p>
+  <b>Is featured:</b>
+  <%= @category.is_featured %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @document.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @document.description %>
+</p>
+
+<p>
+  <b>Readable:</b>
+  <%= @document.readable %>
+</p>
+
+<p>
+  <b>Writable:</b>
+  <%= @document.writable %>
+</p>
+
+<p>
+  <b>Downloaded:</b>
+  <%= @document.downloaded %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @document.category_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @document.user_id %>
+</p>
+
+<p>
+  <b>Current revision text:</b>
+  <%= @document.current_revision_text %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

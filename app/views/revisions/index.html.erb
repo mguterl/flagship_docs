@@ -1,0 +1,37 @@
+<h1>Listing revisions</h1>
+
+<table>
+  <tr>
+    <th>Document</th>
+    <th>User</th>
+    <th>Position</th>
+    <th>Upload file name</th>
+    <th>Upload content type</th>
+    <th>Upload file size</th>
+    <th>Upload updated at</th>
+    <th>Upload file</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @revisions.each do |revision| %>
+  <tr>
+    <td><%= revision.document_id %></td>
+    <td><%= revision.user_id %></td>
+    <td><%= revision.position %></td>
+    <td><%= revision.upload_file_name %></td>
+    <td><%= revision.upload_content_type %></td>
+    <td><%= revision.upload_file_size %></td>
+    <td><%= revision.upload_updated_at %></td>
+    <td><%= revision.upload_file %></td>
+    <td><%= link_to 'Show', revision %></td>
+    <td><%= link_to 'Edit', edit_revision_path(revision) %></td>
+    <td><%= link_to 'Destroy', revision, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Revision', new_revision_path %>

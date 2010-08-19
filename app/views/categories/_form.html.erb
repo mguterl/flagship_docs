@@ -1,0 +1,65 @@
+<%= form_for(@category) do |f| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+      <% @category.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :private %><br />
+    <%= f.check_box :private %>
+  </div>
+  <div class="field">
+    <%= f.label :writable %><br />
+    <%= f.check_box :writable %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_id %><br />
+    <%= f.text_field :parent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :group_id %><br />
+    <%= f.text_field :group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :children_count %><br />
+    <%= f.text_field :children_count %>
+  </div>
+  <div class="field">
+    <%= f.label :ancestors_count %><br />
+    <%= f.text_field :ancestors_count %>
+  </div>
+  <div class="field">
+    <%= f.label :descendants_count %><br />
+    <%= f.text_field :descendants_count %>
+  </div>
+  <div class="field">
+    <%= f.label :background_id %><br />
+    <%= f.text_field :background_id %>
+  </div>
+  <div class="field">
+    <%= f.label :is_featured %><br />
+    <%= f.check_box :is_featured %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
