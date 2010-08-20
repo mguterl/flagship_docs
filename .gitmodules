@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/acts_as_category"]
+	path = vendor/plugins/acts_as_category
+	url = http://github.com/funkensturm/acts_as_category.git

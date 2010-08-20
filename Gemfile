@@ -6,6 +6,8 @@ gem 'ruby-mysql' #native ruby MySQL gem for OSX happiness
 #gem "authlogic"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3' #default authlogic broken in Rails3
 
+gem 'acts_as_list'
+
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
 # group :test do
